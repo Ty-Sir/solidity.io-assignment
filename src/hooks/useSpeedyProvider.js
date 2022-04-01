@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 
-const RINKEBY_NODE_URL = "https://speedy-nodes-nyc.moralis.io/cba5efa373bf0791c57253cb/eth/rinkeby";
+const RINKEBY_NODE_URL = process.env.REACT_APP_RINKEBY_NODE_URL;
 
 export function useSpeedyProvider() {
   const [provider, setProvider] = useState(null);

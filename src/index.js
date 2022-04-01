@@ -6,8 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import { MoralisProvider } from "react-moralis";
 
-const APP_ID = "8SFY53ZTJsGZj8uLpiudJ1aPpt4PtDXQh47YayO5";
-const SERVER_URL = "https://xpsq1xmfw8qj.usemoralis.com:2053/server";
+const APP_ID = process.env.REACT_APP_APP_ID;
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 ReactDOM.render(
   <StrictMode>
