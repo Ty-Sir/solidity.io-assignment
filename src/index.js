@@ -4,11 +4,17 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import { MoralisProvider } from "react-moralis";
+
+const APP_ID = "8SFY53ZTJsGZj8uLpiudJ1aPpt4PtDXQh47YayO5";
+const SERVER_URL = "https://xpsq1xmfw8qj.usemoralis.com:2053/server";
 
 ReactDOM.render(
   <StrictMode>
-    <ColorModeScript />
-    <App />
+    <MoralisProvider appId={APP_ID} serverUrl={SERVER_URL}>
+      <ColorModeScript />
+      <App />
+    </MoralisProvider>
   </StrictMode>,
   document.getElementById('root')
 );
